@@ -1,0 +1,10 @@
+@import "./mixins";
+@import'./var';
+@import "./base/_base-dir";
+*{
+ @include root-grund;
+}
+
+body {
+  background-color: $bgc;
+}

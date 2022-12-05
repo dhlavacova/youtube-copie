@@ -1,0 +1,6 @@
+@mixin grid-layouts($g-columns,$g-rows){
+  display: grid;
+  grid-template-columns: $g-columns;
+  grid-template-rows: $g-rows;
+  grid
+}

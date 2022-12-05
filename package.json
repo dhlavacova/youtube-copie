@@ -1,0 +1,33 @@
+{
+  "name": "youtube-copie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p watch watch:styles",
+    "build": "run-s clean clean:styles build:styles copy",
+    "deploy": "run-s build publish",
+    "build:styles": "sass src/scss:src/styles",
+    "watch": "live-server src",
+    "watch:styles": "sass src/scss:src/styles --watch",
+    "clean": "rm -rf dist",
+    "clean:styles": "rm -rf src/styles",
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
+    "publish": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhlavacova/youtube-copie.git"
+  },
+  "author": "dana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhlavacova/youtube-copie/issues"
+  },
+  "homepage": "https://github.com/dhlavacova/youtube-copie#readme",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1"
+  }
+}
