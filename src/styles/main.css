@@ -12,7 +12,7 @@ body {
   grid-template-rows: 3.5rem 95%;
   grid-template-areas: "header header header header header" "sidebar main main main main";
   font-family: Ariel sans-serif;
-  graw: 1px;
+  gap: 1ex;
 }
 
 header {
@@ -118,8 +118,38 @@ main {
 }
 .haupt-main .album {
   display: grid;
-  grid-template-columns: 100vh repeat(auto-fill, 210px) 300px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: repeat(2, 2fr);
+  grid-template-areas: "klip1 klip2 klip3 klip4" "klip5 klip6 klip7 klip8";
+  gap: 2ex;
+  width: 100vw;
+}
+.haupt-main .img {
+  width: 100%;
+}
+.haupt-main .img:nth-child(1) {
+  grid-area: klip1;
+}
+.haupt-main .img:nth-child(2) {
+  grid-area: klip2;
+}
+.haupt-main .img:nth-child(3) {
+  grid-area: klip3;
+}
+.haupt-main .img:nth-child(4) {
+  grid-area: klip4;
+}
+.haupt-main .img:nth-child(5) {
+  grid-area: klip5;
+}
+.haupt-main .img:nth-child(6) {
+  grid-area: klip6;
+}
+.haupt-main .img:nth-child(7) {
+  grid-area: klip7;
+}
+.haupt-main .img:nth-child(8) {
+  grid-area: klip8;
 }
 
 /*# sourceMappingURL=main.css.map */
