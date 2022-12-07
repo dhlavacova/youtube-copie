@@ -1,10 +1,131 @@
+@import "./fonts";
 @import "./mixins";
 @import'./var';
 @import "./base/_base-dir";
+@import "./layouts/_layouts";
+
+
 *{
  @include root-grund;
 }
 
 body {
-  background-color: $bgc;
+
+  @include with-hight(100vw,100vh);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr ;
+  grid-template-rows:(3.5rem 95%) ;
+  grid-template-areas:
+  'header header header header header'
+  'sidebar main main main main';
+  @include text_font;
+  graw:1px;
+}
+header{
+  grid-area: header;
+
+  /*display: flex;
+  justify-content: space-between;*/
+ }
+header>nav{
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+ justify-content: space-between;
+  align-items: center;
+  ul{
+    display: flex;
+
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+   li {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     a{@include with-hight(40px,40px);
+       display: flex;
+       justify-content: space-between;
+       text-decoration: none;
+       margin-right: 20px;}
+
+       .avatar{
+
+         @include with-hight(60px, 34px);
+         img{
+
+           @include with-hight(34px, 34px);
+           border-radius: 50%;
+         }
+       }
+  }
+  }
+}
+
+sidebar{
+  grid-area: sidebar;
+
+}
+main{
+  grid-area: main;
+  @include with-hight(100%, 100%);
+  margin: 5px;
+  }
+
+.haupt-main{
+  .poster{
+    background-color: #bcbabb;
+    background-image: url("../img/pokac.png");
+    background-position: 50% 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    color: antiquewhite ;
+    @include with-hight(100vw, 20vh);
+      }
+  .pag-poster{
+    @include with-hight(100vw, 15vh);
+    display: flex;
+    align-items: center;
+    .foto-pokac{
+        margin-right: 25px;
+      img{
+        border-radius: 50%;
+      }
+    }
+    .text-pokac {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 60vw;
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #aboniert{
+        border: transparent;
+        border-radius: 25px 25px;
+        width: 6em;
+        height: 3em;
+        &:hover{
+          background-color: rgba(169, 169, 169, 0.35);
+        }
+      }
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+  .album{
+    display: grid;
+    grid-template-columns: 100vh repeat(auto-fill, 210px) 300px;
+    grid-template-rows: repeat(2,2fr);
+
+
+
+
+  }
 }
