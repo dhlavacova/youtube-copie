@@ -1,0 +1,39 @@
+header{
+  grid-area: header;
+  }
+header>nav{
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul{
+    display: flex;
+
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a{@include with-hight(40px,40px);
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        margin-right: 20px;}
+
+      .avatar{
+
+        @include with-hight(60px, 34px);
+        img{
+
+          @include with-hight(34px, 34px);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

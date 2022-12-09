@@ -1,0 +1,11 @@
+body {
+  @include with-hight(100vw,100vh);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr ;
+  grid-template-rows:(3.5rem 95%) ;
+  grid-template-areas:
+  'header header header header header'
+  'sidebar main main main main';
+  @include text_font;
+  gap:1ex;
+}
