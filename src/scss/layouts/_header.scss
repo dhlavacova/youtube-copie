@@ -1,7 +1,7 @@
 header{
   grid-area: header;
   }
-header>nav{
+header>nav {
   background-color: #fff;
   position: fixed;
   width: 100%;
@@ -9,6 +9,29 @@ header>nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .menu-hamburger {
+  input[type="checkbox"] {
+    display: none;
+    /* toggle */
+  }
+
+    .toggle {
+      width: 2rem;
+      height: 1.3rem;
+    /*  position: relative;
+      !*top: 1rem;
+      left: 1rem;*!*/
+
+
+    }
+
+    .hamburger {
+      font-size: 3rem;
+      line-height: 1.4rem;
+    }
+  }
+
   ul{
     display: flex;
 
@@ -35,5 +58,42 @@ header>nav{
         }
       }
     }
+
+  }
+}
+
+
+
+/* for all screens smaller 850px */
+@media (max-width: 850px) {
+  .toggle {
+    display: flex;
+  }
+
+  nav {
+    ul {
+      height: min-content;
+      width: 100%;
+      background-color: var(--background-color);
+
+      /* display: block; */
+      display: none;
+      position: absolute;
+      top: 3.5rem;
+
+      li {
+        height: min-content;
+        width: 100%;
+      }
+    }
+
+    li a {
+      padding: 1.3rem 0;
+    }
+  }
+
+  /* check click on hamburgermenü */
+  #toggle:checked~ul {
+    display: block;
   }
 }

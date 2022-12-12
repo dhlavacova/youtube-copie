@@ -1,4 +1,5 @@
-* {
+@charset "UTF-8";
+if* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,6 +28,21 @@ header > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header > nav .menu-hamburger input[type=checkbox] {
+  display: none;
+  /* toggle */
+}
+header > nav .menu-hamburger .toggle {
+  width: 2rem;
+  height: 1.3rem;
+  /*  position: relative;
+    !*top: 1rem;
+    left: 1rem;*!*/
+}
+header > nav .menu-hamburger .hamburger {
+  font-size: 3rem;
+  line-height: 1.4rem;
 }
 header > nav ul {
   display: flex;
@@ -57,6 +73,32 @@ header > nav ul li .avatar img {
   border-radius: 50%;
 }
 
+/* for all screens smaller 850px */
+@media (max-width: 850px) {
+  .toggle {
+    display: flex;
+  }
+  nav ul {
+    height: min-content;
+    width: 100%;
+    background-color: var(--background-color);
+    /* display: block; */
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+  }
+  nav ul li {
+    height: min-content;
+    width: 100%;
+  }
+  nav li a {
+    padding: 1.3rem 0;
+  }
+  /* check click on hamburgermenü */
+  #toggle:checked ~ ul {
+    display: block;
+  }
+}
 sidebar {
   grid-area: sidebar;
 }
