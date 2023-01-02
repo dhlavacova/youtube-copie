@@ -1,5 +1,5 @@
 @charset "UTF-8";
-if* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -99,15 +99,61 @@ header > nav ul li .avatar img {
     display: block;
   }
 }
-sidebar {
-  grid-area: sidebar;
-}
-
 main {
   grid-area: main;
   width: 100%;
   height: 100%;
   margin: 5px;
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+.haupt-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pag-poster {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 8rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 16px 4px;
+}
+
+.text-pokac {
+  font-size: 13px;
+  font-family: Roboto, Arial, sans-serif;
+  width: 60rem;
+}
+
+.button {
+  display: flex;
+  width: 10rem;
+}
+
+sidebar {
+  grid-area: sidebar;
+}
+
+.hamburger {
+  font-size: 150px;
+  color: lightcoral;
+}
+
+input[type=search] {
+  border: 1px solid rgb(145, 145, 145);
+}
+
+.foto-pokac {
+  width: 8rem;
+}
+.foto-pokac img {
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */

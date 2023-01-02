@@ -1,5 +1,37 @@
-main{
+main {
   grid-area: main;
   @include with-hight(100%, 100%);
   margin: 5px;
+  background-color: blue;
+  margin:0;
+  padding:0;
+ }
+.haupt-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+.pag-poster {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 8rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 16px 4px;
+  }
+
+.text-pokac{
+  font-size: 13px;
+  font-family: Roboto,Arial,sans-serif;
+  width: 60rem;
+  }
+
+.button{
+  display: flex;
+
+
+  width: 10rem;
 }
+
